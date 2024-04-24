@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-image: url(./img/plano_de_fundo.jpg);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 50%;
+  min-height: 90vh;
+  justify-content: space-between;
+  background-color: #111827;
+  align-items: center;
+  border-radius: 10px;
+  background-image: url("img/Ruido.png");
+  background-size: 100% 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container__conteudo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin: 1rem 1.6rem;
+}
+
+.paragrafo__titulo {
+  font-size: 2rem;
+  color: #d1d5db;
+  font-family: 'News Cycle', sans-serif;
+}
+
+.titulo {
+  font-size: 2rem;
+  font-family: 'Bree serif', sans-serif;
+  color: #60A5FA;
+}
+
+
