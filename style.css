@@ -25,16 +25,16 @@ body::before {
 }
 
 .container {
-  width: 50%;
-  min-height: 90%;
+  width: 60%;
+  flex-direction: column;
   justify-content: space-between;
   background-color: #111827;
   align-items: center;
   border-radius: 10px;
   background-image: url("img/Ruido.png");
   background-size: 100% 100%;
-  position: relative;
   overflow: hidden;
+  margin: 0;
 }
 
 .container__conteudo {
@@ -57,27 +57,140 @@ body::before {
 }
 
 .container__form {
-  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 form {
   display: flex;
-  font-size: 16px;
-  width: 90%;
-  color: #D1D5DB;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 94%;
+  height: 16vh;
   background-color: #182237;
-  padding: 0.8rem;
   border-radius: 10px;
+  margin: 2rem 0 0 0;
 }
 
 .container__numero {
   text-align: center;
 }
 
-.container__numero input {
-  width: 3vw;
-  height: 6vh;
+.container__numero label {
+  font-size: 1rem;
+  color: #D1D5DB;
+  font-family: 'Mukta', sans-serif;
+  letter-spacing: 1px;
+  margin: 0 20px 0 20px;
 }
+
+.container__numero input {
+  width: 4vw;
+  height: 8vh;
+  border-radius: 10px;
+  border: none;
+  background-color: #2A3849;
+  border-style: none;
+  text-align: center;
+  color: #60A5FA;
+  font-family: 'Mukta', sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-top: 15px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2A3849;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: #D9D9D9;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #176FF6;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.container__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  flex-grow: 1;
+}
+
+button {
+  color: #D1D5DB;
+}
+
+.button_sortear {
+  width: 94%;
+  height: 5vh;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: #176FF6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button_reset {
+  width: 94%;
+  height: 5vh;
+  margin-bottom: 20px;
+  background-color: #2A3849;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
 
 
 
