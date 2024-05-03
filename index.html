@@ -30,15 +30,15 @@
                 <form action="" id="form">
                     <div class="container__numero">
                         <label for="numero">Sortear</label>
-                        <input type="number">
+                        <input type="number" id="quantidade" min="1">
                     </div>
                     <div class="container__numero">
                         <label for="numero">numero entre</label>
-                        <input type="number">
+                        <input type="number" id="minimo" min="1">
                     </div>
                     <div class="container__numero">
                         <label for="numero">e</label>
-                        <input type="number">
+                        <input type="number" id="maximo" min="1">
                     </div>
                 </form>
             </div>
@@ -48,15 +48,21 @@
                     <span class="slider"></span>
                 </label>
             </div>
+            <div class="chute container__botoes">
+                <button onclick="sortear()" id="btn-sortear" class="container__botao">Sortear</button>
+                <button onclick="reiniciar()" id="btn-reiniciar" class="container__botao-desabilitado">Reiniciar</button>
+            </div>
         </div>
-        <div class="container__button">
+        <!-- <div class="container__button">
             <button onclick="sortear()" class="button_sortear" type="button">Sortear</button>
             <button onclick="reniciarJogo()" class="button_reset" type="button">Reiniciar jogo</button>
-        </div>
+        </div> -->
     </div>
+
+    <!--SCRIPTS-->
+    <script src="/scripts.js" defer></script>
 </body>
 
-<!--SCRIPTS-->
-<script src="/scripts.js"></script>
+
 
 </html>
