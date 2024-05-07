@@ -8,7 +8,7 @@ function sortear() {
   let sorteados = [];
   let numero;
 
-  for (let i = 0; i < quantidade, i++) {
+  for (let i = 0; i < quantidade, i++;) {
     numero = obterNumerosAleatorios(de, ate);
     sorteados.push(numero);
   }
