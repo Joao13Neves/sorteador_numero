@@ -12,6 +12,8 @@ body {
   background-image: url(./img/plano_de_fundo.jpg);
   height: 100vh;
   display: flex;
+  flex-wrap: wrap;
+  flex: 1;
   align-items: center;
   justify-content: center;
 }
@@ -27,10 +29,9 @@ body::before {
 .container {
   width: 60%;
   flex-direction: column;
-  justify-content: space-between;
   background-color: #111827;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 5px;
   background-image: url("img/Ruido.png");
   background-size: 100% 100%;
   overflow: hidden;
@@ -47,13 +48,13 @@ body::before {
 .paragrafo__titulo {
   font-size: 2rem;
   color: #d1d5db;
-  font-family: 'News Cycle', sans-serif;
+  font-family: "News Cycle", sans-serif;
 }
 
 .titulo {
   font-size: 2rem;
-  font-family: 'Bree serif', sans-serif;
-  color: #60A5FA;
+  font-family: "Bree serif", sans-serif;
+  color: #60a5fa;
 }
 
 .container__form {
@@ -63,13 +64,15 @@ body::before {
 
 form {
   display: flex;
+  flex-wrap: wrap;
+  flex: 1;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 94%;
-  height: 16vh;
+  height: 120px;
   background-color: #182237;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 2rem 0 0 0;
 }
 
@@ -79,8 +82,8 @@ form {
 
 .container__numero label {
   font-size: 1rem;
-  color: #D1D5DB;
-  font-family: 'Mukta', sans-serif;
+  color: #d1d5db;
+  font-family: "Mukta", sans-serif;
   letter-spacing: 1px;
   margin: 0 20px 0 20px;
 }
@@ -88,18 +91,18 @@ form {
 .container__numero input {
   width: 50px;
   height: 50px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
-  background-color: #2A3849;
+  background-color: #2a3849;
   border-style: none;
   text-align: center;
-  color: #60A5FA;
-  font-family: 'Mukta', sans-serif;
+  color: #60a5fa;
+  font-family: "Mukta", sans-serif;
 }
 
 input {
   font-size: 1rem;
-  font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   font-weight: 500;
 }
 
@@ -107,8 +110,35 @@ input:focus {
   outline: none;
 }
 
-input[type=number]::-webkit-inner-spin-button { 
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.container__resultado {
+  width: 94%;
+  height: 100px;
+  margin-top: 20px;
+  background-color: #182237;
+  border-radius: 5px;
+  color: #60a5fa;
+}
+
+.resultado_numero {
+  font-size: 1.4rem;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+}
+
+.container__toggle {
+  display: flex;
+}
+
+.container__toggle p {
+  font-size: 1rem;
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  color: #d1d5db;
+  margin: 15px 10px 0 10px;
 }
 
 .toggle-switch {
@@ -132,9 +162,9 @@ input[type=number]::-webkit-inner-spin-button {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2A3849;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: #2a3849;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
@@ -145,14 +175,14 @@ input[type=number]::-webkit-inner-spin-button {
   width: 18px;
   left: 4px;
   bottom: 3px;
-  background-color: #D9D9D9;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: #d9d9d9;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   border-radius: 50%;
 }
 
 input:checked + .slider {
-  background-color: #176FF6;
+  background-color: #176ff6;
 }
 
 input:checked + .slider:before {
@@ -163,6 +193,8 @@ input:checked + .slider:before {
 
 .container__botoes {
   display: flex;
+  flex-wrap: wrap;
+  flex: 1;
   width: 100%;
   flex-direction: column;
   justify-content: center;
@@ -170,9 +202,9 @@ input:checked + .slider:before {
 }
 
 button {
-  color: #D1D5DB;
+  color: #d1d5db;
   font-size: 1rem;
-  font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   font-weight: 400;
 }
 
@@ -181,7 +213,7 @@ button {
   height: 40px;
   margin-top: 40px;
   margin-bottom: 10px;
-  background-color: #176FF6;
+  background-color: #176ff6;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -191,111 +223,63 @@ button {
   max-width: 94%;
   height: 40px;
   margin-bottom: 20px;
-  background-color: #2A3849;
+  background-color: #2a3849;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 /* BREAKPOINTS */
-
-/* Estilos para dispositivos móveis */
-@media only screen and (max-width: 600px) {
-  /* Ajuste de estilos para dispositivos móveis */
+@media screen and (max-width: 600px) {
   .container {
     width: 100%;
     height: 100%;
-  }
-
-  .container__conteudo {
-    margin-top: 40px;
+    border-radius: 5px;
   }
 
   .container__form form {
-    width: 375px;
-    height: 300px;
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin-top: 50px;
   }
 
-  input {
-    font-size: 1.6rem;
+  form {
+    height: 35vh;
+  }
+  
+.container__numero {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+  .container__conteudo {
+    height: 100%;
+    margin: 10px 0 0 10px;
   }
 
-
-  .container__numero label {
-    font-size: 2rem;
-  }
-
-  .container__numero input {
-    width: 40px; /* Reduzir a largura dos inputs de número */
-    height: 40px; /* Reduzir a altura dos inputs de número */
-  }
-
-  .toggle-switch {
-    margin-top: 10px; /* Ajustar a margem superior do toggle-switch */
+  .container__resultado {
+    width: 94%;
+    margin-top: 10px;
   }
 
   .container__botoes {
-    margin-top: 250px;
-    width: 94%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
   }
 
   .container__botao {
-    height: 50px;
-    font-size: 1.7rem;
+    width: 100%;
   }
 
   .container__botao-desabilitado {
-    height: 50px;
-    font-size: 1.7rem;
+    width: 100%;
   }
 }
-
-/* Estilos para tablets */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-  /* Ajuste de estilos para tablets */  
-  .container {
-    width: 90%; /* Reduzir a largura do container */
-  }
-  
-  .container__form form {
-    height: 120px;
-  }
-
-  .container__numero label {
-    font-size: 2rem;
-  }
-
-  input {
-    font-size: 1.6rem;
-  }
-
-  button {
-    font-size: 2rem;
-  }
-
-  .container__numero input {
-    width: 70px;
-    height: 60px;
-  }
-
-  .container__botao {
-    width: 94%;
-    height: 60px;
-  }
-
-  .container__botao-desabilitado {
-    width: 94%;
-    height: 60px;
-  }
-}
-
-
-
-
-
-
-
-
