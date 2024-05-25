@@ -209,6 +209,8 @@ input:checked + .slider:before {
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
+  margin-top: 40px;
+  height: 60px;
 }
 
 button {
@@ -219,10 +221,8 @@ button {
 }
 
 .container__botao {
-  max-width: 94%;
+  max-width: 44%;
   height: 40px;
-  margin-top: 40px;
-  margin-bottom: 10px;
   background-color: #176ff6;
   border: none;
   border-radius: 5px;
@@ -230,9 +230,8 @@ button {
 }
 
 .container__botao-desabilitado {
-  max-width: 94%;
+  max-width: 45%;
   height: 40px;
-  margin-bottom: 20px;
   background-color: #2a3849;
   border: none;
   border-radius: 5px;

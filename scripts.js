@@ -27,6 +27,12 @@ function obterNumerosAleatorios(min, max) {
 
 function alterarStatusBotao() {
   let botao = document.getElementById("btn-reiniciar");
-  botao.classList.remove("container__botao");
-  botao.classList.add("container__botao-desabilitado");
+
+  if (botao.classList.contains("container__botao-desabilitado")) {
+    botao.classList.remove("container__botao-desabilitado");
+    botao.classList.add("container__botao");
+  } else {
+    botao.classList.remove("container__botao");
+    botao.classList.add("container__botao-desabilitado");
+  }
 }
