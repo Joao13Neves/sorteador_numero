@@ -16,6 +16,7 @@ body {
   flex: 1;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 body::before {
@@ -115,12 +116,21 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .container__resultado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 94%;
   height: 100px;
   margin-top: 20px;
   background-color: #182237;
   border-radius: 5px;
   color: #60a5fa;
+}
+
+.resultado_numero {
+  font-size: 1.4rem;
+  font-family: "Mukta", sans-serif;
+  font-weight: 300;
 }
 
 .resultado_numero {
