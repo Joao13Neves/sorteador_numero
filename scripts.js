@@ -15,8 +15,10 @@ function sortear() {
     sorteados.push(numero);
   }
 
+  sorteados.sort((a, b) => a - b);
+
   let resultado = document.getElementById("numeros");
-  resultado.innerHTML = `<label class="resultado_numero" id="numeros">${sorteados}</label>`;
+  resultado.innerHTML = `<p>Os números sorteados foram:</p><label class="resultado_numero" id="numeros">${sorteados}</label>`;
   alterarStatusBotao();
 }
 
@@ -35,4 +37,13 @@ function alterarStatusBotao() {
     botao.classList.remove("container__botao");
     botao.classList.add("container__botao-desabilitado");
   }
+}
+
+function reiniciar() {
+  document.getElementById("quantidade").value="";
+  document.getElementById("de").value="";
+  document.getElementById("ate").value="";
+
+  let removendoDiv = document.getElementById("resultado");
+  removendoDiv.remove();
 }

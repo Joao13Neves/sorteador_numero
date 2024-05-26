@@ -30,7 +30,7 @@
                 <form action="" id="form">
                     <div class="container__numero">
                         <label for="numero">Sortear</label>
-                        <input type="number" id="quantidade" min="1">
+                        <input class="label-sortear" type="number" id="quantidade" min="1">
                     </div>
                     <div class="container__numero">
                         <label for="numero">numero entre</label>
@@ -38,11 +38,13 @@
                     </div>
                     <div class="container__numero">
                         <label for="numero">e</label>
-                        <input type="number" id="ate" min="1">
+                        <input class="label-e" type="number" id="ate" min="1">
                     </div>
                 </form>
                 <div class="container__resultado" id="resultado">
-                    <label class="resultado_numero" id="numeros"></label>
+                    <div class="container__resultado-texto">
+                        <label class="resultado_numero" id="numeros"></label>
+                    </div>
                 </div>
             </div>
             <div class="container__toggle">
@@ -52,7 +54,7 @@
                 </label>
                 <p>Não permitir números repetidos</p>
             </div>
-            <div class="chute container__botoes">
+            <div class="container__botoes">
                 <button onclick="sortear()" id="btn-sortear" class="container__botao">Sortear</button>
                 <button onclick="reiniciar()" id="btn-reiniciar"
                     class="container__botao-desabilitado">Reiniciar</button>
