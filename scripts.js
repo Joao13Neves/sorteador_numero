@@ -18,7 +18,10 @@ function sortear() {
   sorteados.sort((a, b) => a - b);
 
   let resultado = document.getElementById("numeros");
-  resultado.innerHTML = `<p>Os números sorteados foram:</p><label class="resultado_numero" id="numeros">${sorteados}</label>`;
+  resultado.innerHTML = `<label>${sorteados.join(", ")}</label`;
+
+  document.getElementById("resultado").classList.remove("oculto");
+
   alterarStatusBotao();
 }
 
@@ -27,6 +30,7 @@ function obterNumerosAleatorios(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+// função para alterar o botão
 function alterarStatusBotao() {
   let botao = document.getElementById("btn-reiniciar");
 
@@ -39,11 +43,16 @@ function alterarStatusBotao() {
   }
 }
 
+// função para reiniciar
 function reiniciar() {
-  document.getElementById("quantidade").value="";
-  document.getElementById("de").value="";
-  document.getElementById("ate").value="";
+  document.getElementById("quantidade").value = "";
+  document.getElementById("de").value = "";
+  document.getElementById("ate").value = "";
 
   let removendoDiv = document.getElementById("resultado");
   removendoDiv.remove();
+
+  window.location.reload();
+
+  alterarStatusBotao();
 }
