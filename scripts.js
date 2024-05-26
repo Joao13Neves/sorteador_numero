@@ -4,6 +4,17 @@ function sortear() {
   let de = parseInt(document.getElementById("de").value);
   let ate = parseInt(document.getElementById("ate").value);
 
+  if(isNaN(quantidade) || isNaN(de) || isNaN(ate)) {
+    alert("Por favor, o preenchimento dos campos são obritórios.");
+    return;
+  }
+
+  // if(isNaN(quantidade) || isNaN(de) || isNaN(ate)) {
+  //   document.getElementById("mensagem-erro").onclick = function(){
+  //     swal('O campos são obritórios!', 'error')
+  //   };
+  // }
+
   let sorteados = [];
   let numero;
 
