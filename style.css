@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-image: url(./img/plano_de_fundo.jpg);
+  background-image: url(/assets/img/plano_de_fundo.jpg);
   width: 100vw;
   height: 100vh;
   display: flex;
