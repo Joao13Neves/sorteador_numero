@@ -4,16 +4,17 @@ function sortear() {
   let de = parseInt(document.getElementById("de").value);
   let ate = parseInt(document.getElementById("ate").value);
 
-  if(isNaN(quantidade) || isNaN(de) || isNaN(ate)) {
-    alert("Por favor, o preenchimento dos campos são obritórios.");
+  if (isNaN(quantidade) || isNaN(de) || isNaN(ate)) {
+    alert("Todos os campos são obrigatórios");
     return;
   }
 
-  // if(isNaN(quantidade) || isNaN(de) || isNaN(ate)) {
-  //   document.getElementById("mensagem-erro").onclick = function(){
-  //     swal('O campos são obritórios!', 'error')
-  //   };
-  // }
+  if (quantidade > de && quantidade > ate) {
+    alert(
+      `A quantidade ${quantidade} é maior que as extremidades de ${de} e ${ate}, escolha uma quantidade que esteja dentro das extremidades.`
+    );
+    return;
+  }
 
   let sorteados = [];
   let numero;
