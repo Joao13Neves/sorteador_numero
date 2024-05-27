@@ -5,14 +5,35 @@ function sortear() {
   let ate = parseInt(document.getElementById("ate").value);
 
   if (isNaN(quantidade) || isNaN(de) || isNaN(ate)) {
-    alert("Todos os campos são obrigatórios");
+    Swal.fire({
+      titlte: 'Alerta!',
+      text: 'Todos os campos são obrigatórios.',
+      icon: 'warning',
+      position: 'top',
+      confirmButtonText: 'Ok'
+    });
     return;
   }
 
   if (quantidade > de && quantidade > ate) {
-    alert(
-      `A quantidade ${quantidade} é maior que as extremidades de ${de} e ${ate}, escolha uma quantidade que esteja dentro das extremidades.`
-    );
+    Swal.fire({
+      titlte: 'Alerta!',
+      text: 'A quantidade informada é maior que as extremidades.',
+      icon: 'warning',
+      position: 'top',
+      confirmButtonText: 'Ok'
+    });
+    return;
+  }
+
+  if (de >= ate) {
+    Swal.fire({
+      titlte: 'Alerta!',
+      text: 'A quantidade inicial é maior que a quantidade final.',
+      icon: 'warning',
+      position: 'top',
+      confirmButtonText: 'Ok'
+    });
     return;
   }
 
