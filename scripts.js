@@ -6,21 +6,21 @@ function sortear() {
 
   if (isNaN(quantidade) || isNaN(de) || isNaN(ate)) {
     Swal.fire({
-      titlte: 'Alerta!',
-      text: 'Todos os campos são obrigatórios.',
-      icon: 'warning',
       position: 'top',
+      icon: 'warning',
+      title: 'Alerta!',
+      text: 'Todos os campos são obrigatórios.',
       confirmButtonText: 'Ok'
     });
     return;
   }
 
-  if (quantidade > de && quantidade > ate) {
+  if (quantidade > ate) {
     Swal.fire({
-      titlte: 'Alerta!',
-      text: 'A quantidade informada é maior que as extremidades.',
-      icon: 'warning',
       position: 'top',
+      icon: 'warning',
+      title: 'Alerta!',
+      text: 'A quantidade informada é maior que a quantide final, escolha um número maior.',
       confirmButtonText: 'Ok'
     });
     return;
@@ -28,10 +28,10 @@ function sortear() {
 
   if (de >= ate) {
     Swal.fire({
-      titlte: 'Alerta!',
-      text: 'A quantidade inicial é maior que a quantidade final.',
-      icon: 'warning',
       position: 'top',
+      icon: 'warning',
+      title: 'Alerta!',
+      text: 'A quantidade a sortear não pode ser igual que a quantidade final.',
       confirmButtonText: 'Ok'
     });
     return;

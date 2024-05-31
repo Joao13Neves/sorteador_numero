@@ -1,6 +1,15 @@
+.swal2-icon.swal2-warning.swal2-icon-show {
+  border-color: yellow;
+  color: yellow;
+}
+
 .swal2-popup {
     background: #2a3849;
     color: #d1d5db;
     font-family: 'Mukta', sans-serif;
     font-size: 1.2rem;
+  }
+
+  button.swal2-confirm.swal2-styled {
+    background-color: #176ff6;
   }
