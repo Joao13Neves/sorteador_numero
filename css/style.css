@@ -184,7 +184,7 @@ button {
 }
 
 .container__botao {
-  width: 400px;
+  width: 50%;
   height: 50px;
   background-color: #176ff6;
   border: none;
@@ -198,7 +198,7 @@ button {
 }
 
 .container__botao-desabilitado {
-  width: 400px;
+  width: 50%;
   height: 50px;
   background-color: #2a3849;
   border: none;
@@ -278,16 +278,8 @@ button {
     margin-top: 15px;
   }
 
-  .container__botao {
+  .container__botoes button {
     font-size: 2rem;
-    width: 450px;
-    height: 70px;
-  }
-
-  .container__botao-desabilitado {
-    font-size: 2rem;
-    width: 450px;
-    height: 70px;
   }
 }
 
